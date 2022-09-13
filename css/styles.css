@@ -1,3 +1,8 @@
+:root {
+  --blue: #2196f3;
+  --grey: #757575;
+}
+
 body {
   background-color: #ffffff;
   color: #212121;
@@ -43,11 +48,11 @@ body {
 }
 
 .header-icon {
-  fill: #757575;
+  fill: var(--grey);
 }
 
 .logo-span {
-  color: #2196f3;
+  color: var(--blue);
 }
 
 .nav-item-list {
@@ -68,19 +73,23 @@ body {
 
 .nav-bar-item:hover,
 .nav-bar-item:focus {
-  color: #2196f3;
+  color: var(--blue);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar-underline::after {
   content: "";
-  background-color: #2196f3;
+  background-color: var(--blue);
   width: 100%;
   height: 4px;
   transform: translateY(29px);
   display: block;
   border-radius: 2px;
+}
+
+.navbar-active {
+  color: var(--blue);
 }
 
 .nav-links {
@@ -102,7 +111,7 @@ body {
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--grey);
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -115,25 +124,25 @@ body {
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--grey);
   text-decoration: none;
 }
 
 .nav-address:hover,
 .nav-links a:focus {
-  color: #2196f3;
+  color: var(--blue);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-address:hover .header-icon {
-  fill: #2196f3;
+  fill: var(--blue);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-address:focus .header-icon {
-  fill: #2196f3;
+  fill: var(--blue);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -167,9 +176,9 @@ body {
 .first-section-button {
   width: 200px;
   height: 50px;
-  background: #2196f3;
+  background: var(--blue);
   border-radius: 4px;
-  border-color: #2196f3;
+  border-color: var(--blue);
   cursor: pointer;
   color: #ffffff;
   margin-top: 30px;
@@ -220,7 +229,7 @@ body {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--grey);
   padding-top: 10px;
 }
 
@@ -281,7 +290,7 @@ body {
   font-size: 16px;
   line-height: 1.188;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--grey);
   padding: 10px 0 25px 0;
   margin: 0;
 }
@@ -316,7 +325,7 @@ body {
 
 .fourth-section-icons-item:hover,
 .fourth-section-icons-item:focus {
-  background-color: #2196f3;
+  background-color: var(--blue);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -358,8 +367,8 @@ body {
 
 .icon-fifth-section:hover,
 .fifth-section-logos-item:focus svg {
-  fill: #2196f3;
-  border-color: #2196f3;
+  fill: var(--blue);
+  border-color: var(--blue);
   cursor: pointer;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -407,6 +416,12 @@ body {
   align-items: center;
 }
 
+.modal-button:hover,
+.modal-button:focus {
+  fill: var(--blue);
+  border-color: var(--blue);
+}
+
 .portfolio-main-section {
   padding-bottom: 94px;
 }
@@ -427,13 +442,13 @@ body {
   border-color: #f5f4fa;
   cursor: pointer;
   border-style: solid;
-  border: #2196f3;
+  border: var(--blue);
   font-weight: 500;
   font-size: 16px;
 }
 
 .portfolio-nav-button:hover {
-  background-color: #2196f3;
+  background-color: var(--blue);
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -464,13 +479,12 @@ body {
   position: relative;
   color: white;
   height: 294px;
-  font-weight: 400;
   font-size: 18px;
   padding: 49px 45px 49px 24px;
   line-height: 1.56;
 }
 
-.portfolio-image:hover .portfiolio-image-animation {
+.portfolio-image-list li:hover .portfiolio-image-animation {
   transform: translateY(0);
 }
 
@@ -485,7 +499,7 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--grey);
 }
 
 .portfolio-image-list img {
@@ -573,7 +587,7 @@ body {
 
 .footer-contact:hover,
 .footer-contact:focus {
-  color: #2196f3;
+  color: var(--blue);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -581,6 +595,7 @@ body {
 .footer-joinus-container {
   width: 276px;
   margin: 0;
+  margin-top: 12px;
 }
 .footer-joinus-text {
   font-weight: 700;
@@ -610,7 +625,7 @@ body {
 
 .footer-joinus-container li:hover,
 .icon-footer-item:focus {
-  background-color: #2196f3;
+  background-color: var(--blue);
   cursor: pointer;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
